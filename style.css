@@ -1,8 +1,79 @@
-body{
-border-color: blue;
+/* --- CONFIGURAÇÕES GERAIS --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    /* Fundo escuro estilizado com gradiente sutil */
+    background: linear-gradient(135deg, #0f0c20 0%, #15151e 50%, #0a0a0f 100%);
+    background-attachment: fixed;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* --- TÍTULO PRINCIPAL (GUSTAVR088) --- */
 h1 {
-    color: aqua;
-    size: 75px;
+    text-align: center;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 40px;
+    color: #fff;
+    /* Efeito de brilho Neon */
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055, 0 0 40px #ff0055;
+}
+
+/* --- SEÇÕES / CATEGORIAS (ROCK, MPB, BOOMBAP) --- */
+h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin: 50px 0 20px 0;
+    color: #00f0ff;
+    border-left: 5px solid #ff0055;
+    padding-left: 15px;
+    text-shadow: 0 0 8px rgba(0, 240, 255, 0.4);
+}
+
+/* --- ESTILIZAÇÃO DOS VÍDEOS (IFRAMES) --- */
+iframe {
+    width: 100%;
+    /* O tamanho ajusta sozinho na tela sem cortar nada */
+    aspect-ratio: 16 / 9; 
+    height: auto;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    /* Sombra elegante em volta dos vídeos */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+/* Efeito monstro ao passar o mouse por cima do vídeo */
+iframe:hover {
+    transform: translateY(-5px) scale(1.01);
+    box-shadow: 0 15px 35px rgba(255, 0, 85, 0.3);
+    border-color: #ff0055;
+}
+
+/* --- AJUSTE PARA CELULAR --- */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
 }
